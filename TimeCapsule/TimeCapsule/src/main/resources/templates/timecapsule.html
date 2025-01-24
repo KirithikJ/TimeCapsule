@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Time Capsule</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-image: url('/image/time02.jpg'); /* Replace with a sci-fi or Doraemon-themed background */
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        input, textarea, select {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #c5d0d6;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Time Capsule Lab</h1>
+    <div class="container">
+        <form action="/submit" method="post">
+            <label for="email"> Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="message">Your Message:</label><br>
+            <textarea id="message" name="message" rows="5" required></textarea><br>
+            
+            <label for="deliveryTime">Deliver In:</label><br>
+            <select id="deliveryTime" name="deliveryTime">
+                <option value="1">1 Year</option>
+                <option value="5">5 Years</option>
+                <option value="10">10 Years</option>
+            </select><br>
+            
+            <button type="submit">Send to the Future!</button>
+        </form>
+    </div>
+</body>
+</html>
